@@ -1,6 +1,6 @@
 import { NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes, Router } from '@angular/router';
+import { RouterModule, Routes, Router, PreloadAllModules } from '@angular/router';
 
 import { environment } from '../environments/environment';
 
@@ -9,6 +9,7 @@ const appRoutes: Routes = [
     redirectTo: '/home',
     pathMatch: 'full'
   },
+  { path: 'items', loadChildren: 'app/items/items.module#ItemsModule' }
 ];
 
 @NgModule({
@@ -16,7 +17,11 @@ const appRoutes: Routes = [
     CommonModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true }
+      {
+        useHash: true,
+        preloadingStrategy: PreloadAllModules,
+        enableTracing: true
+      }
     )
   ],
   exports: [RouterModule]
