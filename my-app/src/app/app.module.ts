@@ -10,10 +10,13 @@ import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
 import { ItemsModule } from './items/items.module';
+import { CollectionService } from './core/services/collection/collection.service';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
   imports: [
+    AppRoutingModule,
     BrowserModule,
     CoreModule,
     HomeModule,
@@ -25,7 +28,9 @@ import { ItemsModule } from './items/items.module';
   declarations: [
     AppComponent
   ],
-  providers: [],
+  providers: [
+    CollectionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
