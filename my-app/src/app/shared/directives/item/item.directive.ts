@@ -1,14 +1,14 @@
-import { Directive, Input, OnInit, HostBinding } from '@angular/core';
+import { Directive, Input, HostBinding, OnChanges } from '@angular/core';
 
 @Directive({
   selector: '[appItem]'
 })
-export class ItemDirective implements OnInit {
+export class ItemDirective implements OnChanges {
   @Input('appItem') appItem: string;
   @HostBinding('class') elemClass: string;
   constructor() {
   }
-  ngOnInit() {
+  ngOnChanges() {
     this.elemClass = this.formatClass(this.appItem);
   }
 
