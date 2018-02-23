@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListItemsComponent } from './containers/list-items/list-items.component';
-import { SharedModule } from '../shared/shared.module';
-import { ItemComponent } from '../shared/components/item/item.component';
 import { ItemsRoutingModule } from './items-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
+
+import { ItemComponent } from './components/item/item.component';
+import { ListItemsComponent } from './containers/list-items/list-items.component';
 
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
-    ItemsRoutingModule
+    ItemsRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [
     ListItemsComponent,

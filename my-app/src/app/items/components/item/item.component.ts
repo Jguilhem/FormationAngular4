@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Item } from '../../interfaces/item.model';
-import { State } from '../../enums/state.enum';
+
 import { CollectionService } from '../../../core/services/collection/collection.service';
+import { State } from '../../../shared/enums/state.enum';
+import { Item } from '../../../shared/interfaces/item.model';
 
 @Component({
   selector: 'app-item',
