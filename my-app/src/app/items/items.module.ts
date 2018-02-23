@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 
 import { ItemComponent } from './components/item/item.component';
 import { ListItemsComponent } from './containers/list-items/list-items.component';
+import { AddItemComponent } from './containers/add-item/add-item.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { ListItemsComponent } from './containers/list-items/list-items.component
   ],
   declarations: [
     ListItemsComponent,
-    ItemComponent
+    ItemComponent,
+    AddItemComponent
   ],
   exports: [
     ListItemsComponent

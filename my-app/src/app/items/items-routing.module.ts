@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+
+import { AddItemComponent } from './containers/add-item/add-item.component';
 import { ListItemsComponent } from './containers/list-items/list-items.component';
-import { FormComponent } from '../shared/components/form/form.component';
 
 const appRoutes: Routes = [
   { path: 'liste', component: ListItemsComponent },
-  { path: 'add', component: FormComponent }
+  { path: 'add', component: AddItemComponent }
 ];
 
 @NgModule({

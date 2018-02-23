@@ -21,11 +21,12 @@ import { FormComponent } from './components/form/form.component';
   declarations: [
     NavComponent,
     ItemDirective,
-    FormComponent,
+    FormComponent
   ],
   exports: [
     NavComponent,
-    ItemDirective
+    ItemDirective,
+    FormComponent
   ]
 })
 export class SharedModule { }
